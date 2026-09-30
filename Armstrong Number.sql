@@ -1,0 +1,21 @@
+DECLARE
+    N NUMBER := 371;
+    TEMP NUMBER;
+    REM NUMBER;
+    SUM_VALUE NUMBER := 0;
+BEGIN
+    TEMP := N;
+
+    WHILE TEMP > 0 LOOP
+        REM := MOD(TEMP, 10);
+        SUM_VALUE := SUM_VALUE + (REM * REM * REM);
+        TEMP := TRUNC(TEMP / 10);
+    END LOOP;
+
+    IF SUM_VALUE = N THEN
+        DBMS_OUTPUT.PUT_LINE(N || ' IS AN ARMSTRONG NUMBER');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(N || ' IS NOT AN ARMSTRONG NUMBER');
+    END IF;
+END;
+/
