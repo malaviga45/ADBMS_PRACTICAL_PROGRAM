@@ -1,0 +1,11 @@
+DECLARE
+    N NUMBER := 10;
+    SUM_VALUE NUMBER := 0;
+BEGIN
+    FOR I IN 1..N LOOP
+        SUM_VALUE := SUM_VALUE + I;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('SUM OF FIRST ' || N || ' NUMBERS = ' || SUM_VALUE);
+END;
+/
