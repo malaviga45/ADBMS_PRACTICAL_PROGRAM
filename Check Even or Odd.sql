@@ -1,0 +1,10 @@
+DECLARE
+    N NUMBER := 45;
+BEGIN
+    IF MOD(N, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE(N || ' IS EVEN');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(N || ' IS ODD');
+    END IF;
+END;
+/
