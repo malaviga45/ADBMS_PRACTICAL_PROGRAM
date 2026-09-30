@@ -1,0 +1,21 @@
+DECLARE
+    N NUMBER := 1221;
+    TEMP NUMBER;
+    REM NUMBER;
+    REV NUMBER := 0;
+BEGIN
+    TEMP := N;
+
+    WHILE TEMP > 0 LOOP
+        REM := MOD(TEMP, 10);
+        REV := (REV * 10) + REM;
+        TEMP := TRUNC(TEMP / 10);
+    END LOOP;
+
+    IF REV = N THEN
+        DBMS_OUTPUT.PUT_LINE(N || ' IS A PALINDROME');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(N || ' IS NOT A PALINDROME');
+    END IF;
+END;
+/
