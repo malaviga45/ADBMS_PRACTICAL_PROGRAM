@@ -1,0 +1,19 @@
+DECLARE
+    A NUMBER := 20;
+    B NUMBER := 5;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('ADDITION       = ' || (A + B));
+    DBMS_OUTPUT.PUT_LINE('SUBTRACTION    = ' || (A - B));
+    DBMS_OUTPUT.PUT_LINE('MULTIPLICATION = ' || (A * B));
+    DBMS_OUTPUT.PUT_LINE('DIVISION       = ' || (A / B));
+    DBMS_OUTPUT.PUT_LINE('REMAINDER      = ' || MOD(A, B));
+
+    IF A > B THEN
+        DBMS_OUTPUT.PUT_LINE('A IS GREATER THAN B');
+    END IF;
+
+    IF A <> B THEN
+        DBMS_OUTPUT.PUT_LINE('A IS NOT EQUAL TO B');
+    END IF;
+END;
+/
